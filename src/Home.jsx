@@ -1,6 +1,8 @@
-// import { BsTwitterX } from "react-icons/bs";
-// import IconContainer from "./components/icon-container";
+import About from "./components/About";
+import Contact from "./components/Contact";
+import Experience from "./components/Experience";
 import HeroSection from "./components/HeroSection";
+import Projects from "./components/Projects";
 import SkillsSection from "./components/Skills";
 
 export default function Home() {
@@ -8,6 +10,10 @@ export default function Home() {
     <div>
       <HeroSection />
       <SkillsSection />
+      <Experience />
+      <About />
+      <Projects />
+      <Contact />
     </div>
   );
 }

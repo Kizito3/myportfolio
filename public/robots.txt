@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://https://myportfolio-one-pied-57.vercel.app//sitemap.xml
+

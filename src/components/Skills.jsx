@@ -1,81 +1,100 @@
+/* eslint-disable no-unused-vars */
+import React, { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import { FaCss3, FaGitAlt, FaNodeJs, FaReact, FaSass } from "react-icons/fa";
-import SkillContainer from "./SkillContainer";
 import { SiJavascript, SiPhp } from "react-icons/si";
 import { BiLogoTypescript } from "react-icons/bi";
 import { IoLogoHtml5 } from "react-icons/io";
 import { RiNextjsFill } from "react-icons/ri";
+import SkillContainer from "./SkillContainer";
+
+const parentVariants = {
+  hidden: {
+    opacity: 0,
+    transition: {
+      // when hiding, reverse the staggering
+      staggerChildren: 0.12,
+      staggerDirection: -1,
+      when: "afterChildren",
+    },
+  },
+  show: {
+    opacity: 1,
+    transition: {
+      // when showing, stagger forward
+      staggerChildren: 0.12,
+      staggerDirection: 1,
+      when: "beforeChildren",
+    },
+  },
+};
+
+const childVariants = {
+  hidden: { opacity: 0, y: 20, scale: 0.97 },
+  show: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: { duration: 0.45, ease: "easeOut" },
+  },
+};
+
+const headingVariants = {
+  hidden: { opacity: 0, y: -12 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.45 } },
+};
+
+const skills = [
+  { icon: <FaGitAlt size={60} />, label: "Git" },
+  { icon: <FaNodeJs size={60} />, label: "NodeJs" },
+  { icon: <SiJavascript size={60} />, label: "Javascript" },
+  { icon: <BiLogoTypescript size={60} />, label: "Typescript" },
+  { icon: <FaReact size={60} />, label: "React" },
+  { icon: <IoLogoHtml5 size={60} />, label: "Html" },
+  { icon: <RiNextjsFill size={60} />, label: "NextJs" },
+  { icon: <FaCss3 size={60} />, label: "Css" },
+  { icon: <FaSass size={60} />, label: "Scss" },
+  { icon: <SiPhp size={60} />, label: "PHP" },
+];
 
 export default function SkillsSection() {
-  return (
-    <div className="lg:my-[120px] my-[50px] lg:px-[80px] px-5">
-      <div>
-        <h1 className="text-center lg:mb-[80px] mb-[40px] text-5xl">
-          My <strong className="font-bold">Skills</strong>
-        </h1>
+  const ref = useRef(null);
+  // amount: how much of the element should be visible to count as "in view" (0..1)
+  const inView = useInView(ref, { amount: 0.2, once: false });
 
-        <div className="flex flex-wrap gap-10 items-center justify-center">
-          <SkillContainer>
-            <div className="flex flex-col items-center justify-center gap-5">
-              <FaGitAlt size={60} />
-              <p className="text-xl font-bold">Git</p>
-            </div>
-          </SkillContainer>
-          <SkillContainer>
-            <div className="flex flex-col items-center justify-center gap-5">
-              <FaNodeJs size={60} />
-              <p className="text-xl font-bold">NodeJs</p>
-            </div>
-          </SkillContainer>
-          <SkillContainer>
-            <div className="flex flex-col items-center justify-center gap-5">
-              <SiJavascript size={60} />
-              <p className="text-xl font-bold">Javascript</p>
-            </div>
-          </SkillContainer>
-          <SkillContainer>
-            <div className="flex flex-col items-center justify-center gap-5">
-              <BiLogoTypescript size={60} />
-              <p className="text-xl font-bold">Typescript</p>
-            </div>
-          </SkillContainer>
-          <SkillContainer>
-            <div className="flex flex-col items-center justify-center gap-5">
-              <FaReact size={60} />
-              <p className="text-xl font-bold">React</p>
-            </div>
-          </SkillContainer>
-          <SkillContainer>
-            <div className="flex flex-col items-center justify-center gap-5">
-              <IoLogoHtml5 size={60} />
-              <p className="text-xl font-bold">Html</p>
-            </div>
-          </SkillContainer>
-          <SkillContainer>
-            <div className="flex flex-col items-center justify-center gap-5">
-              <RiNextjsFill size={60} />
-              <p className="text-xl font-bold">NextJs</p>
-            </div>
-          </SkillContainer>
-          <SkillContainer>
-            <div className="flex flex-col items-center justify-center gap-5">
-              <FaCss3 size={60} />
-              <p className="text-xl font-bold">Css</p>
-            </div>
-          </SkillContainer>
-          <SkillContainer>
-            <div className="flex flex-col items-center justify-center gap-5">
-              <FaSass size={60} />
-              <p className="text-xl font-bold">Scss</p>
-            </div>
-          </SkillContainer>
-          <SkillContainer>
-            <div className="flex flex-col items-center justify-center gap-5">
-              <SiPhp size={60} />
-              <p className="text-xl font-bold">PHP</p>
-            </div>
-          </SkillContainer>
-        </div>
+  return (
+    <section id="skills">
+      <div className="lg:my-[120px] my-[50px] lg:px-[80px] px-5">
+        <motion.div
+          ref={ref}
+          variants={parentVariants}
+          initial="hidden"
+          // toggle animate based on inView (this causes exit animation when leaving)
+          animate={inView ? "show" : "hidden"}
+          className="flex flex-col items-center"
+        >
+          <motion.h1
+            variants={headingVariants}
+            className="text-center lg:mb-[80px] mb-[40px] lg:text-5xl text-3xl"
+          >
+            My <strong className="font-bold">Skills</strong>
+          </motion.h1>
+
+          <div className="flex flex-wrap lg:gap-10 gap-4 items-center justify-center">
+            {skills.map((skill, i) => (
+              <SkillContainer key={i}>
+                <motion.div
+                  variants={childVariants}
+                  className="flex flex-col items-center justify-center gap-5"
+                >
+                  {skill.icon}
+                  <p className="text-xl font-bold">{skill.label}</p>
+                </motion.div>
+              </SkillContainer>
+            ))}
+          </div>
+        </motion.div>
       </div>
-    </div>
+    </section>
   );
 }
