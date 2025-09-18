@@ -11,7 +11,7 @@ export const projects = [
     description:
       "VoteNaija is Nigeria’s leading platform for monetized voting...",
     image: "/images/project1.png",
-    link: "https://votenaija.com",
+    link: "https://votenaija.ng",
     reverse: false,
   },
   {
