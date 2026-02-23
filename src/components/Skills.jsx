@@ -6,6 +6,8 @@ import { SiJavascript, SiPhp } from "react-icons/si";
 import { BiLogoTypescript } from "react-icons/bi";
 import { IoLogoHtml5 } from "react-icons/io";
 import { RiNextjsFill } from "react-icons/ri";
+import { TbBrandAstro } from "react-icons/tb";
+import { FaVuejs } from "react-icons/fa";
 import SkillContainer from "./SkillContainer";
 
 const parentVariants = {
@@ -55,6 +57,8 @@ const skills = [
   { icon: <FaCss3 size={60} />, label: "Css" },
   { icon: <FaSass size={60} />, label: "Scss" },
   { icon: <SiPhp size={60} />, label: "PHP" },
+  { icon: <TbBrandAstro size={60} />, label: "Astro" },
+  { icon: <FaVuejs size={60} />, label: "VueJs" },
 ];
 
 export default function SkillsSection() {
