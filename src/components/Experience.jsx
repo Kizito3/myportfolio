@@ -33,7 +33,7 @@ export default function Experience() {
           Junior Frontend Developer at{" "}
           <a
             href="https://aledoy.com/"
-            className="underline text-[#d9cb48]"
+            className="underline text-red-600"
             target="__blank"
           >
             Aledoy
@@ -43,6 +43,24 @@ export default function Experience() {
       date: "August 2022 - August 2024",
       description:
         "Worked on frontend development tasks, ensuring smooth user experiences, collaborating with designers, and maintaining scalable codebases.",
+    },
+    {
+      logo: "images/Gt.png",
+      title: (
+        <>
+          Intern Frontend Developer at{" "}
+          <a
+            href="https://gtcomnet.com/"
+            className="underline text-green-600"
+            target="__blank"
+          >
+            GreenTech
+          </a>
+        </>
+      ),
+      date: "January 2026 - Present",
+      description:
+        "Worked on frontend landing pages, ensuring smooth user experiences, collaborating with designers, and maintaining scalable codebases.",
     },
   ];
 

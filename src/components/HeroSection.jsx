@@ -52,8 +52,8 @@ const socials = [
 
 export default function HeroSection() {
   return (
-    <section className="pt-[160px]">
-      <div className="flex items-center justify-center lg:flex-row flex-col-reverse px-5">
+    <section className="pt-[160px] max-w-7xl mx-auto">
+      <div className="flex items-center justify-center gap-6 lg:flex-row flex-col-reverse px-5">
         {/* LEFT CONTENT */}
         <motion.div
           variants={containerVariants}
@@ -107,9 +107,9 @@ export default function HeroSection() {
           className="mb-10 lg:mb-0"
         >
           <motion.img
-            src="/images/illustration.png"
+            src="/images/me.jpg"
             alt="illustration"
-            className="object-cover"
+            className="lg:w-[690px] lg:h-[700px] rounded-[8px] object-cover"
             animate={{
               y: [0, -10, 0], // float effect
             }}

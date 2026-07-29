@@ -25,29 +25,30 @@ export const projects = [
   },
   {
     id: "03",
-    title: "Cheap Professional Website in Nigeria",
+    title: "StellaySync Landing Page/Website",
     description:
-      "At cheap website Nigeria, our mission is to provide affordable...",
-    image: "/images/project3.png",
-    link: "https://cheapwebsitenigeria.com/",
+      "A centralized health care facility management system for patient records, clinical workflows, and administrative operations....",
+    image: "/images/project7.png",
+    link: "https://stellasync.com/",
     reverse: false,
   },
   {
     id: "04",
+    title: "Big Teens Naija - Nigeria's Premier Reality TV Show for Talented Teenagers",
+    description:
+      "Big Teens Naija is a groundbreaking reality TV show created specifically for Nigerian teenagers. We provide a safe, supervised platform for young talents to showcase their skills, build confidence, and learn essential life skills under the guidance of experienced mentors....",
+    image: "/images/project8.png",
+    link: "bigteens9ja.com",
+    reverse: true,
+  },
+  {
+    id: "05",
     title: "Saas - A Landing Page For a SAAS Company",
     description:
       "Celebrate the joy of accomplishment with an app designed to track progress...",
     image: "/images/project4.png",
     link: "https://saas-landing-page-wheat.vercel.app/",
-    reverse: true,
-  },
-  {
-    id: "05",
-    title: "GrandField consult - Empowering Journeys, Unleashing Potential",
-    description:
-      "Grand Field Consult Ltd. Your one-stop Finance & Travel Shop, We are Always Ready and Available to Attend to all your Travel Needs...",
-    image: "/images/project5.png",
-    link: "#",
     reverse: false,
   },
+  
 ];
