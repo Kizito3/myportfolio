@@ -38,7 +38,7 @@ export const projects = [
     description:
       "Big Teens Naija is a groundbreaking reality TV show created specifically for Nigerian teenagers. We provide a safe, supervised platform for young talents to showcase their skills, build confidence, and learn essential life skills under the guidance of experienced mentors....",
     image: "/images/project8.png",
-    link: "bigteens9ja.com",
+    link: "https://bigteens9ja.com",
     reverse: true,
   },
   {
