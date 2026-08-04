@@ -34,21 +34,31 @@ export const projects = [
   },
   {
     id: "04",
-    title: "Big Teens Naija - Nigeria's Premier Reality TV Show for Talented Teenagers",
+    title:
+      "Big Teens Naija - Nigeria's Premier Reality TV Show for Talented Teenagers",
     description:
       "Big Teens Naija is a groundbreaking reality TV show created specifically for Nigerian teenagers. We provide a safe, supervised platform for young talents to showcase their skills, build confidence, and learn essential life skills under the guidance of experienced mentors....",
     image: "/images/project8.png",
     link: "https://bigteens9ja.com",
     reverse: true,
   },
-  {
+   {
     id: "05",
+    title: "GradePoint - Your CGPA, clearly calculated.",
+    description:
+      "Track your grades, project your CGPA, and stay on top of your academic goals — built for students, by a student.",
+    image: "/images/project9.png",
+    link: "https://gradepoint-theta.vercel.app/",
+    reverse: false,
+  },
+  {
+    id: "06",
     title: "Saas - A Landing Page For a SAAS Company",
     description:
       "Celebrate the joy of accomplishment with an app designed to track progress...",
-    image: "/images/project4.png",
+    image: "/images/project8.png",
     link: "https://saas-landing-page-wheat.vercel.app/",
-    reverse: false,
+    reverse: true,
   },
-  
+ 
 ];
